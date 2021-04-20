@@ -7,9 +7,10 @@
 #define GON PORTC = (1 << PC5)
 #define GOFF PORTC = (0 << PC5)
 #define OFF PORTB = 0X00
-void print(int i)
+void prints(int i)
 {
 	if(i == 0){
+		GOFF;
 		OFF;
 		PORTB= 0X7F;
 	}
